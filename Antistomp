@@ -1,0 +1,28 @@
+--[
+ Antistomp made by ChrisBomb
+--[
+	while true do
+		wait()
+		if game.Players.LocalPlayer.Character.BodyEffects['K.O'].Value == true  or game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+			local respawnPlr = function()
+				local plr = game.Players.LocalPlayer
+				local char = plr.Character
+				local oldPos = char.HumanoidRootPart.CFrame;
+				for i, v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("Accessory") then
+                        v:Destroy()
+                    end
+end
+				local newChar = Instance.new("Model",workspace)
+				plr.Character = newChar
+				wait()
+				plr.Character = char
+				newChar:Destroy()
+				game:service'Players'.LocalPlayer.Character:BreakJoints()
+				wait(game:service'Players'.RespawnTime + 0.5)
+				wait(0.5)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldPos
+			end
+			respawnPlr();
+		end
+	end
