@@ -1,0 +1,13 @@
+--[
+ Antibag made by ChrisBomb
+--[
+
+local LP = game:GetService("Players").LocalPlayer
+	local CH = LP.Character
+	CH.ChildAdded:Connect(function(brokie)
+		if brokie:IsA("MeshPart") then do
+				wait(0)
+				Brokie:Destroy()
+			end
+		end
+	end)
