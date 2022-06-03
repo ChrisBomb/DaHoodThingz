@@ -1,0 +1,21 @@
+--[
+AutoMask scripted by ChrisBomb
+--[
+
+wait()
+    local savepos = game.Players.LocalPlayer.Character.UpperTorso.Position
+            local Brokie = game.Workspace.Ignored.Shop["[Surgeon Mask] - $25"]
+            game.Players.LocalPlayer.Character:MoveTo(Brokie.Head.Position)
+            wait(0.25)
+            fireclickdetector(Brokie.ClickDetector,4)
+            wait(0.25)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(savepos)
+        wait(.25)
+    local surg = game.Players.LocalPlayer.Backpack:FindFirstChild("Mask")
+    surg.Parent = game.Players.LocalPlayer.Character
+    wait(.13)
+    game.Players.LocalPlayer.Character.Mask:Activate()
+    wait(.13)
+    game:GetService("Players").localPlayer.Character:FindFirstChild("In-gameMask").Handle:Destroy()
+    wait(.13)
+    surg.Parent = game.Players.localPlayer.Backpack
