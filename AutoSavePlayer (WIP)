@@ -1,0 +1,31 @@
+--[
+ AutoSave Player made by ChrisBomb
+--[
+
+local Target = "" --- Player name goes here
+
+_G.Chris = true
+
+while _G.Chris == true do
+    wait()
+ if game.Players[Target].Character.BodyEffects['K.O'].Value == true then
+        wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+    wait()
+game:GetService("ReplicatedStorage").MainEvent:FireServer('Grabbing')
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(81.9543762, -7.20323515, 591.837158, 0.99985832, 0.000330285227, -0.0168298427, -1.49754196e-05, 0.999824524, 0.0187318455, 0.0168330763, -0.0187289398, 0.999682903)
+wait(1)
+game:GetService("ReplicatedStorage").MainEvent:FireServer('Grabbing', false)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-327.33313, 80.2199707, -254.699203, 0.00585120916, 0, -0.999982893, 0, 1, 0, 0.999982893, 0, 0.00585120916)
+    _G.Chris = false
+end
+end
