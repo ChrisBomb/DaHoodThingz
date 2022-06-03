@@ -1,0 +1,25 @@
+--- NOTE: I didnt script fist reach into this yet but this is the basics of killbot ---
+--[
+ Killbot made by ChrisBomb
+--[
+
+local Target = "" --- Player name goes here
+
+_G.Brokie = true
+
+while _G.Brokie == true do
+local Comb = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Combat")
+Comb.Parent = game.Players.LocalPlayer.Character
+
+while wait(.3) do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.Combat:Activate()
+wait()
+ if game.Players[Target].Character.BodyEffects['K.O'].Value == true then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.UpperTorso.CFrame
+  game.Players.LocalPlayer.Character.Combat:Deactivate()
+  wait()
+  game:GetService("ReplicatedStorage").MainEvent:FireServer('Stomp')
+end
+end
+end
