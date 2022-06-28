@@ -1,0 +1,8 @@
+_G.Chris = true
+
+while _G.Chris == true do
+    wait()
+   if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end
+end
